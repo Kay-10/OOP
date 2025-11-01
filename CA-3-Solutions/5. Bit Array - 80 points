@@ -1,0 +1,32 @@
+/* Question:
+You are given four integers - N,S,P,Q. You will use them to create a sequence 'a' with the following pseudocode
+a[0] = S (modulo 2^31)
+for i = 1 to N-1
+    a[i] = a[i-1]*P+Q (modulo 2^31) 
+
+Your task is to calculate the number of distinct integers in the sequence a.
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <unordered_set>
+using namespace std;
+
+
+int main() {
+    unsigned int N, S, P, Q, mod, prev;
+    cin >> N >> S >> P >> Q;
+    mod = 1LL << 31;
+    prev = S;
+    int counter = 1;
+    for(int i = 1; i < N; i++) {
+        S = (S * P + Q)% mod;
+        counter += (S == prev) ? 0 : 1;
+        prev = S;
+    }
+    
+    cout << counter;
+    return 0;
+}
