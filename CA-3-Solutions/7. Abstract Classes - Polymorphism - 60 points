@@ -1,0 +1,115 @@
+/*Question:
+Given an abstract base class Cache with member variables and functions:
+mp - Map the key to the node in the linked list
+cp - Capacity
+tail - Double linked list tail pointer
+head - Double linked list head pointer
+set() - Set/insert the value of the key, if present, otherwise add the key as the most recently used key. If the cache has reached its capacity, it should replace the least recently used key with a new key.
+get() - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+You have to write a class LRUCache which extends the class Cache and uses the member functions and variables to implement an LRU cache. */
+
+#include <iostream>
+#include <vector>
+#include <map>
+#include <string>
+#include <unordered_map>
+#include <algorithm>
+using namespace std;
+
+struct Node {
+    int key, value;
+    struct Node* prev;
+    struct Node* next;
+    Node(int k, int v) { 
+        key = k; 
+        value = v; 
+        prev = nullptr; 
+        next = nullptr; 
+    }
+};
+
+class Cache {
+public:
+    int cp;
+    unordered_map<int, struct Node*> mp; 
+    struct Node* tail;
+    struct Node* head;
+    virtual int get(int) = 0; 
+    virtual void set(int, int) = 0; 
+};
+
+class LRUCache: public Cache {
+private:
+    void addNode(Node *node) {
+        node->next = head;
+        node->prev = nullptr;
+        if(head != nullptr) { head->prev = node; }
+        head = node;
+        if(tail == nullptr) { tail = node; }
+    }
+
+    void removeNode(Node* node) {
+        if(node->next != nullptr) { node->next->prev = node->prev; }
+        else { tail = node->prev; }
+        if(node->prev != nullptr) { node->prev->next = node->next; }
+        else { head = node->next; }
+    }
+
+public:
+    LRUCache(int capacity) {
+        cp = capacity;
+        head = nullptr;
+        tail = nullptr;
+    }
+    
+    int get(int key) override {
+        if(mp.find(key) == mp.end()) { 
+            return -1; 
+        }
+        struct Node* node = mp[key];
+        if(node != head) {
+            removeNode(node);
+            addNode(node);
+        }
+        return node->value;
+    }
+
+    void set(int key, int value) override {
+        if (mp.find(key) != mp.end()) {
+            Node* node = mp[key];
+            node->value = value;
+            removeNode(node);
+            addNode(node);
+            return;
+        }
+        Node* newNode = new Node(key, value);
+        mp[key] = newNode;
+        addNode(newNode);
+        if (mp.size() > cp) {
+            Node* temp = tail;
+            mp.erase(temp->key); 
+            removeNode(temp);
+            delete temp;
+        }
+    }
+};
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+    LRUCache LCn(m);
+    for(int i = 0; i < n; i++) {
+        string s;
+        int a, b;
+        cin >> s;
+        if (s == "set") {
+            cin >> a >> b;
+            LCn.set(a, b);
+        }
+        else if (s == "get") {
+            cin >> a;
+            cout << LCn.get(a) << endl; 
+        }
+    }
+    return 0;
+}
