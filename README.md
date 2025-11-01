@@ -1,5 +1,5 @@
 # OOP
 
-Compilation of codes for the Object Oriented Programming Subject \n
-Prof. Pallavi Nehete\n
+Compilation of codes for the Object Oriented Programming Subject<br>
+Prof. Pallavi Nehete<br>
 Roll No: 47
