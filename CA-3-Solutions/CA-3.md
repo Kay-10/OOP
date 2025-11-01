@@ -11,7 +11,17 @@ Problems are sourced from:
 ---
 
 ## 🧮 Problem Summary  
-<span style="background-color:#00ffff; color:#0d1117; padding:6px 12px; border-radius:8px; font-weight:bold;">🏆 Total: 520 Points</span>
+
+<br>
+
+<p align="center" style="margin:50px;">
+  <img src="https://img.shields.io/badge/Language-C++-00427E?style=for-the-badge&logo=c%2B%2B&logoColor=white&rounded=true" height="80" class="badge-hover">
+  <img src="https://img.shields.io/badge/Platform-HackerRank-1FAA59?style=for-the-badge&logo=hackerrank&logoColor=white&rounded=true" height="80" class="badge-hover">
+  <img src="https://img.shields.io/badge/Total%20Points-520-0088CC?style=for-the-badge&logo=trophy&logoColor=white&rounded=true" height="80" class="badge-hover">
+  <img src="https://img.shields.io/badge/Problems%20Solved-15-6C3483?style=for-the-badge&logo=check-circle&logoColor=white&rounded=true" height="80" class="badge-hover">
+</p>
+
+<br>
 
 <div style="background-color:#0d1117; color:#c9d1d9; padding:15px; border-radius:10px; margin-top:10px;">
 
@@ -43,23 +53,20 @@ Problems are sourced from:
 </table>
 
 </div>
-
 ---
 
 ## 🖼️ Proof of Completion
 
 <div align="center" style="background-color:#0d1117; padding:20px; border-radius:10px; margin:10px 0;">
-  <h3 style="color:#00ffff;">📷 Proof 1</h3>
+  <h3 style="color:#00ffff;">📷 Points Tally</h3>
   <img src="images/proof1.png" alt="HackerRank Proof 1" width="600" style="border-radius:10px; box-shadow:0 0 10px #00ffff;">
 </div>
 
 <div align="center" style="background-color:#0d1117; padding:20px; border-radius:10px; margin:10px 0;">
-  <h3 style="color:#00ffff;">📸 Proof 2</h3>
+  <h3 style="color:#00ffff;">📸 Badge</h3>
   <img src="images/proof2.png" alt="HackerRank Proof 2" width="600" style="border-radius:10px; box-shadow:0 0 10px #00ffff;">
 </div>
 
 ---
 ### ✨ Author
-**Kaustubh Pandey**  
-**Your Name**  
-📅 *Last updated:* November 2025  
+**Kaustubh Pandey** 
