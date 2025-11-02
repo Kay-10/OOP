@@ -45,7 +45,7 @@ Problems are sourced from:
   <tr><td>l</td><td>Deque - STL</td><td>50</td></tr>
   <tr><td>m</td><td>Inherited Code</td><td>30</td></tr>
   <tr><td>n</td><td>Accessing Inherited Functions</td><td>30</td></tr>
-  <tr><td>o</td><td>C++ Class Template Specialization</td><td>25</td></tr>
+  <tr><td>o</td><td>C++ Class Template Specialization</td><td>35</td></tr>
   <tr style="background-color:#161b22; font-weight:bold; color:#00ffff;">
     <td colspan="2" style="padding:8px; text-align:right;">Total Points:</td>
     <td style="padding:8px;">520</td>
