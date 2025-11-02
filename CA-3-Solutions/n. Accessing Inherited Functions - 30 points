@@ -1,1 +1,136 @@
+/* Question:
+Given are three classes A, B and C, each implementing their own version of func() to multiply a value passed by reference by 2, 3 or 5 respectively. Given class D, modify the class D and implement the function update_val
+so that it sets D's val to new_val by manipulating val only calling the func defined in classes A, B and C. 
 
+class D {
+	int val;
+	public:
+		 D()
+		 {
+		 	val = 1;
+		 }
+		 void update_val(int new_val)
+		 {	//body	 }
+		 void check(int); //Do not delete this line.
+};
+*/
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+class A
+{
+    public:
+        A(){
+            callA = 0;
+        }
+    private:
+        int callA;
+        void inc(){
+            callA++;
+        }
+
+    protected:
+        void func(int & a)
+        {
+            a = a * 2;
+            inc();
+        }
+    public:
+        int getA(){
+            return callA;
+        }
+};
+
+class B
+{
+    public:
+        B(){
+            callB = 0;
+        }
+    private:
+        int callB;
+        void inc(){
+            callB++;
+        }
+    protected:
+        void func(int & a)
+        {
+            a = a * 3;
+            inc();
+        }
+    public:
+        int getB(){
+            return callB;
+        }
+};
+
+class C
+{
+    public:
+        C(){
+            callC = 0;
+        }
+    private:
+        int callC;
+        void inc(){
+            callC++;
+        }
+    protected:
+        void func(int & a)
+        {
+            a = a * 5;
+            inc();
+        }
+    public:
+        int getC(){
+            return callC;
+        }
+};
+
+class D: public A, public B, public C
+{
+    public:
+        int val;
+         D()
+         {
+             val = 1;
+         }
+         
+         void update_val(int new_val)
+         {
+            
+            while(new_val%2 == 0) {
+                A::func(val);
+                new_val /= 2;
+            }
+            while(new_val%3 == 0) {
+                B::func(val);
+                new_val /= 3;
+            }
+            while(new_val%5 == 0) {
+                C::func(val);
+                new_val /= 5;
+            }
+         }
+         void check(int);
+};
+
+void D::check(int nval) {
+    update_val(nval);
+    cout << "Value = " << this->val << endl;
+    cout << "A's func called " << getA() << " times" <<endl; 
+    cout << "B's func called " << getB() << " times" <<endl; 
+    cout << "C's func called " << getC() << " times" <<endl;
+}
+int main() {
+    D d;
+    int val;
+    cin >> val;
+    d.check(val);
+    return 0;
+}
