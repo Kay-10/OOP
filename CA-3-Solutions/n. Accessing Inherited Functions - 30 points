@@ -1,6 +1,7 @@
 /* Question:
 Given are three classes A, B and C, each implementing their own version of func() to multiply a value passed by reference by 2, 3 or 5 respectively. Given class D, modify the class D and implement the function update_val
 so that it sets D's val to new_val by manipulating val only calling the func defined in classes A, B and C. 
+*/
 
 class D {
 	int val;
