@@ -66,7 +66,3 @@ Problems are sourced from:
   <h3 style="color:#00ffff;">📸 Badge</h3>
   <img src="images/proof2.png" alt="HackerRank Proof 2" width="600" style="border-radius:10px; box-shadow:0 0 10px #00ffff;">
 </div>
-
----
-### ✨ Author
-**Kaustubh Pandey** 
