@@ -1,6 +1,6 @@
 # 🧩 C++ Practice Submissions – HackerRank
 
-This repository contains solutions to various **C++ problems** from [HackerRank’s C++ domain](https://www.hackerrank.com/domains/cpp), as proscribed part of Sem-IIIs CCA/LCA-3
+This repository contains solutions to various **C++ problems** from [HackerRank’s C++ domain](https://www.hackerrank.com/domains/cpp), as proscribed part of Sem-IIIs CCA/LCA-3 for the subject Object Oriented Programming
 
 ---
 
