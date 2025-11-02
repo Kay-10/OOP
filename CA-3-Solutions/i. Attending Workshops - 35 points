@@ -2,6 +2,7 @@
 A student signed up for n workshops and wants to attend the maximum number of workshops where no two workshops overlap. 
 Return the maximum number of workshops the student can attend—without overlap. The next workshop cannot be attended until the previous workshop ends.
 Implement two structures - Workshop and Available_Workshops and two functions Available_Workshops* init (int start_time[]. int duration[], int n) amd int CalculateMaxWorkshops(Available_Workshops* ptr) to achieve this.
+*/
 
 #include <cmath>
 #include <cstdio>
