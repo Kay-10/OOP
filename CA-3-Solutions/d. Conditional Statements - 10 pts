@@ -1,7 +1,8 @@
 /* Question:
 Given a positive integer i, do the following:
 If i <= 9, print the lowercase English word corresponding to the number (e.g., one for 1, two for 2, etc.).
-If i > 9, print Greater than 9. */
+If i > 9, print Greater than 9. 
+*/
 
 #include <bits/stdc++.h>
 
