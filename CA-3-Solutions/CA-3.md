@@ -58,8 +58,6 @@ Problems are sourced from:
 ## 🖼️ Proof of Completion
 
 <div align="center" style="background-color:#0d1117; padding:20px; border-radius:10px; margin:10px 0;">
-  <h3 style="color:#00ffff;">📷 Points Tally</h3>
-  <img src="images/proof1.png" alt="HackerRank Proof 1" width="600" style="border-radius:10px; box-shadow:0 0 10px #00ffff;">
 </div>
 
 <div align="center" style="background-color:#0d1117; padding:20px; border-radius:10px; margin:10px 0;">
