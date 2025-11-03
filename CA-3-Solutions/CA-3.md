@@ -61,5 +61,5 @@ Problems are sourced from:
 </div>
 
 <div align="center" style="background-color:#0d1117; padding:20px; border-radius:10px; margin:10px 0;">
-  <img src="images/Result.png" alt="HackerRank Proof 2" width="600" style="border-radius:10px; box-shadow:0 0 10px #00ffff;">
+  <img src="OOP/images/Result.png" alt="HackerRank Proof 2" width="600" style="border-radius:10px; box-shadow:0 0 10px #00ffff;">
 </div>
