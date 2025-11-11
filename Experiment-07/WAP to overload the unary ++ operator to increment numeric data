@@ -23,7 +23,7 @@ void operator ++(a &a, int) { a.a++; }
 int main () {
   e1.getData();
   ++e1;
-  e1.putData():;
+  e1.putData();
   e1++;
   e1.putData();
   return 0;
